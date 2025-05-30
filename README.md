@@ -89,7 +89,7 @@ If you use this work, please cite:
 @inproceedings{karimian2025clipit,
   title={CLIP-IT: CLIP-based Pairing of Histology Images with Privileged Textual Information},
   author={Karimian, Banafsheh and Avanzato, Giulia and Belharbi, Soufian and McCaffrey, Luke and Shateri, Mohammadhadi and Granger, Eric},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  booktitle={arxiv},
   year={2025}
 }
 ```
