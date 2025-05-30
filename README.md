@@ -17,7 +17,7 @@ Current multimodal vision-language models (VLMs) for cancer diagnosis rely on ex
 - **Discarding** the text modality at inference time — fast and efficient deployment.
 
 <p align="center">
-  <img src="assets/clipit-diagram.png" alt="CLIP-IT Diagram" width="600"/>
+  <img src="clipit-diagram.png" alt="CLIP-IT Diagram" width="600"/>
 </p>
 
 ---
