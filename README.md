@@ -58,15 +58,47 @@ External text modality: TCGA pathology reports.
 ## 🚀 Training
 
 ```bash
-python train_clipit.py --dataset PCAM --backbone vit_b16 --lora_rank 16 --lora_alpha 4
+python train_fuser_.py --ds pcam --model UNI --lora_r 16 --lora_alpha 4
 ```
 
-You can change parameters such as:
+## ⚙️ Script Arguments
 
-- `--backbone`: Vision backbone (ViT-B/16, DINO, UNI, etc.)
-- `--text_encoder`: Pretrained CLIP text encoder (e.g., Conch)
-- `--lora_*`: LoRA parameters for efficient fine-tuning
+The main training script supports a wide range of arguments for flexible configuration:
 
+### 📁 Dataset and Experiment Settings
+
+- `--model`: Vision backbone (UNI, DINOL14, VITS_8, VITS_16, VITB_8, VITB_16)
+- `---ds`: Dataset (pcam, bach, crc)
+- `--run`: Run identifier for experiment versioning
+- `--dir`: Directory to save logs and checkpoints
+- `--output`: Output folder for this run
+
+### 🔧 Training Hyperparameters
+- `--batch`: Batch size (default: 64)
+- `--lr`: Learning rate (default: 0.001)
+- `--ep`: Number of training epochs
+- `--worker`: Number of data loader workers
+- `--val-int`: Fraction of training data for validation (e.g., 0.1 for 10%)
+- `--clip`: Gradient clipping value (default: 0.5)
+- `--weight-decay`: Weight decay for optimizer
+- `--scheduler`: Whether to use learning rate scheduler (0 or 1)
+
+### 🧠 LoRA Configuration
+- `--lora-r`: LoRA rank (e.g., 16)
+- `--lora-alpha`: LoRA scaling factor
+- `--lora-dropout`: Dropout used in LoRA modules
+- `--lora-text`: Apply LoRA to text encoder (1 = yes, 0 = no)
+- `--lora-vision`: Apply LoRA to vision encoder (1 = yes, 0 = no)
+- `--no-lin`: Remove linear layer from LoRA targets
+- 
+### 🛠 Optimization and Logging
+- `--monitor`: Metric to monitor (e.g., `val_loss`)
+- `--mod`: Mode for monitoring (`min` or `max`)
+- `--patience`: Early stopping patience
+- `--early`: Enable early stopping
+- `--log`: Logging frequency in epochs
+- `--wandb`: Enable Weights & Biases logging
+- `--chkpnt`: Save model checkpoints
 ---
 
 ## 📈 Results
