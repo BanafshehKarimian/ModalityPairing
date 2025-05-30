@@ -1,7 +1,5 @@
 # CLIP-IT: CLIP-based Pairing of Histology Images with Privileged Textual Information
 
-[![Paper](https://img.shields.io/badge/MICCAI-2025-blue)](https://doi.org/...)  
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)  
 [![Code](https://img.shields.io/badge/code-available-brightgreen)](https://github.com/BanafshehKarimian/ModalityPairing)
 
 > **CLIP-IT** is a novel framework for enhancing histology image classification by **pairing vision data with external, unpaired text reports** using CLIP-based matching. It **trains a unimodal classifier with multimodal benefits** — without requiring text at inference time.
