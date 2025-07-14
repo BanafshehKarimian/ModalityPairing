@@ -35,7 +35,7 @@ cd ModalityPairing
 pip install -r requirements.txt
 ```
 
-Ensure you have the required datasets (PCAM, BACH, CRC) and optionally TCGA reports for pairing.
+Ensure you have the required datasets (PCAM, BACH, CRC) and optionally TCGA reports for pairing. Put them here /export/datasets/public/.
 
 ---
 
