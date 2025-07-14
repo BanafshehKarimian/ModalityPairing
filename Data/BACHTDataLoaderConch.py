@@ -15,7 +15,7 @@ from conch.open_clip_custom import create_model_from_pretrained
 from conch.open_clip_custom import tokenize, get_tokenizer
 from sklearn.model_selection import train_test_split
 device = "cuda" if torch.cuda.is_available() else "cpu"
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 
 class BachDataset(Dataset):
 
