@@ -22,7 +22,7 @@ from torch.optim.lr_scheduler import CosineAnnealingLR
 from peft import LoraConfig, get_peft_model
 from conch.open_clip_custom import tokenize, get_tokenizer
 from conch.open_clip_custom import create_model_from_pretrained
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 
 class CONCHVisionNetModel(pl.LightningModule):
     def __init__(self, num_classes = 2, batch_size = 64, lr=0.001, momentum=0.9, nesterov = True, weight_decay = 0.0001, bbfroze = True, lora = False, targets = (nn.Linear, nn.Embedding, nn.Conv2d), lora_r = 16, lora_alpha = 8):
