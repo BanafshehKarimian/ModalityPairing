@@ -54,8 +54,24 @@ External text modality: TCGA pathology reports.
 ---
 
 ## 🚀 Training
+First download the conch checkpoints and put it in the following location:
 
+```bash
 CONCH/checkpoints/conch/pytorch_model.bin
+```
+
+Then get the text:
+```bash
+python get_text.py --keyword tissue_type
+```
+The paired indexes are in the Paired_indexes folder, but for any dataset, you can use a method as shown in map_text_pcam.py. 
+
+Then you need to fine-tune the text model:
+```bash
+python finetune_text.py --ds pcam 
+```
+
+And finally train your CLIPIT:
 
 ```bash
 python train_fuser_.py --ds pcam --model UNI --lora_r 16 --lora_alpha 4
