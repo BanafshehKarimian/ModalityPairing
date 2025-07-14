@@ -82,9 +82,10 @@ class VITBNetModel8(pl.LightningModule):
         return F.cross_entropy(y, yp)
 
     def configure_optimizers(self):
-        optimizer = optim.SGD(self.parameters(), lr = self.lr, momentum = self.momentum, nesterov = self.nesterov, weight_decay = self.weight_decay)
-        scheduler = CosineAnnealingLR(optimizer, T_max = 12500)
-        return {"optimizer": optimizer, "lr_scheduler": scheduler}
+        #optimizer = optim.SGD(self.parameters(), lr = self.lr, momentum = self.momentum, nesterov = self.nesterov, weight_decay = self.weight_decay)
+        optimizer = optim.Adam(self.parameters(), lr = self.lr, weight_decay = self.weight_decay)
+        #scheduler = CosineAnnealingLR(optimizer, T_max = 12500, eta_min = 0.0001)
+        return {"optimizer": optimizer}#, "lr_scheduler": scheduler
 
     def process_batch(self, batch):
         img = batch[0].to(self.device)
