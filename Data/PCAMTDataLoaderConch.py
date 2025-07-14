@@ -19,7 +19,7 @@ import torch.nn as nn
 from transformers import AutoProcessor, AutoModelForZeroShotImageClassification
 
 processor = AutoProcessor.from_pretrained("vinid/plip")
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 device = "cuda" if torch.cuda.is_available() else "cpu"
 def resize_token_embeddings(model, tokenizer):
     tokenizer.add_special_tokens({'mask_token': '<mask>'})
