@@ -84,7 +84,7 @@ class CRCTDataModule(pl.LightningDataModule):
         
         training_data = CRCDataset("train", mean, std, size, no_text = no_text, threshold = 0.4)
         self.test_data = CRCDataset("val", mean, std, size, no_text = no_text)
-        labels = np.load("/export/livia/home/vision/Bkarimian/mod/crc_labels.npy")#[training_data[i][2] for i in range(len(training_data))]
+        labels = np.load("./crc_labels.npy")#[training_data[i][2] for i in range(len(training_data))]
         #train = [i for i in range(len(training_data)) if i%20 != 0]
         #val = [i for i in range(len(training_data)) if i%20 == 0]
         train, val = train_test_split(np.arange(len(training_data)),
