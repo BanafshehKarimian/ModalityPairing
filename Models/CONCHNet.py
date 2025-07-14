@@ -23,7 +23,7 @@ from torchmetrics.classification import MulticlassAccuracy
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from conch.open_clip_custom import tokenize, get_tokenizer
 from conch.open_clip_custom import create_model_from_pretrained
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 
 class CONCHNetModel(pl.LightningModule):
     def __init__(self, class_names = [], num_classes = 2, batch_size = 64, lr=0.001, momentum=0.9, nesterov = True, weight_decay = 0.0001, bbfroze = True, lora_r = 16, lora_alpha = 8, targets = (nn.Linear, nn.Embedding, nn.Conv2d)):
