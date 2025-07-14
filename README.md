@@ -55,6 +55,8 @@ External text modality: TCGA pathology reports.
 
 ## 🚀 Training
 
+CONCH/checkpoints/conch/pytorch_model.bin
+
 ```bash
 python train_fuser_.py --ds pcam --model UNI --lora_r 16 --lora_alpha 4
 ```
