@@ -13,7 +13,7 @@ from conch.open_clip_custom import tokenize, get_tokenizer
 from conch.open_clip_custom import create_model_from_pretrained
 from conch.open_clip_custom import tokenize, get_tokenizer
 import re
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 device = "cuda" if torch.cuda.is_available() else "cpu"
 class PachDataset(Dataset):
 
