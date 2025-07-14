@@ -8,7 +8,7 @@ from torchvision.transforms import v2
 from conch.open_clip_custom import create_model_from_pretrained
 from transformers import AutoProcessor, AutoModelForZeroShotImageClassification
 
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 class PCAMDataModule(pl.LightningDataModule):
     def __init__(self, batch_size, num_workers, download = True, mean = None, std = None, transformer = "CONCH"):
         super().__init__()
