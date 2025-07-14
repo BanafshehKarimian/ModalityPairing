@@ -8,7 +8,7 @@ from tqdm import tqdm
 from torchvision import datasets, transforms
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 model, preprocess = create_model_from_pretrained("conch_ViT-B-16", checkpoint_path=checkpoint_path)
 model = model.to(device)
 _ = model.eval()
