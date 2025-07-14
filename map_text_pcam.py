@@ -14,7 +14,7 @@ model = model.to(device)
 _ = model.eval()
 text_encoder = model.text
 vision_encoder = model.visual
-with open("text/text_gpt_pcam.txt") as file:
+with open("text/text_breast.txt") as file:
     texts = [line.rstrip() for line in file]
 tokenizer = get_tokenizer()
 def get_text_embedding(text):
@@ -69,8 +69,8 @@ data =  datasets.PCAM(
                 split = "train"
             )
 value, index = get_pairing(data, embed_tensor)
-np.save("./Paired_indexes/text_gpt_pcam_train_v.npy", value)
-np.save("./Paired_indexes/text_gpt_pcam_train_indexes.npy", index)
+np.save("./Paired_indexes/text_pcam_train_v.npy", value)
+np.save("./Paired_indexes/text_pcam_train_indexes.npy", index)
 print("training done")
 data =  datasets.PCAM(
                 root="/export/datasets/public/",
@@ -79,8 +79,8 @@ data =  datasets.PCAM(
                 split = "test"
             )
 value, index = get_pairing(data, embed_tensor)
-np.save("./Paired_indexes/text_gpt_pcam_test_v.npy", value)
-np.save("./Paired_indexes/text_gpt_pcam_test_indexes.npy", index)
+np.save("./Paired_indexes/text_pcam_test_v.npy", value)
+np.save("./Paired_indexes/text_pcam_test_indexes.npy", index)
 print("testing done")
 
 data =  datasets.PCAM(
@@ -90,6 +90,6 @@ data =  datasets.PCAM(
                 split = "val"
             )
 value, index = get_pairing(data, embed_tensor)
-np.save("./Paired_indexes/text_gpt_pcam_val_v.npy", value)
-np.save("./Paired_indexes/text_gpt_pcam_val_indexes.npy", index)
+np.save("./Paired_indexes/text_pcam_val_v.npy", value)
+np.save("./Paired_indexes/text_pcam_val_indexes.npy", index)
 print("val done")
