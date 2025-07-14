@@ -146,7 +146,3 @@ If you use this work, please cite:
 ```
 
 ---
-
-## 🤝 Acknowledgements
-
-This work is supported by the Canadian Institutes of Health Research, NSERC, and the Digital Research Alliance of Canada.
