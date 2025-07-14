@@ -22,7 +22,7 @@ from torchmetrics.classification import MulticlassAccuracy
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from conch.open_clip_custom import tokenize, get_tokenizer
 from conch.open_clip_custom import create_model_from_pretrained
-checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
 def resize_token_embeddings(model, tokenizer):
     tokenizer.add_special_tokens({'mask_token': '<mask>'})
     mask_id = tokenizer.mask_token_id
