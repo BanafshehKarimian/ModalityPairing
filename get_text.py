@@ -38,7 +38,7 @@ if __name__ == "__main__":
         with open(args.text_dir+args.keyword+'.txt', 'w') as f:
             for line in text:
                 f.write(f"{line[0]}\n")
-    checkpoint_path = '/export/livia/home/vision/Bkarimian/CONCH/checkpoints/conch/pytorch_model.bin'
+    checkpoint_path = './CONCH/checkpoints/conch/pytorch_model.bin'
     model, preprocess = create_model_from_pretrained("conch_ViT-B-16", checkpoint_path=checkpoint_path)
     model = model.to(device)
     _ = model.eval()
