@@ -149,11 +149,14 @@ CLIP-IT yields consistent performance gains with minimal inference overhead.
 If you use this work, please cite:
 
 ```bibtex
-@inproceedings{karimian2025clipit,
-  title={CLIP-IT: CLIP-based Pairing of Histology Images with Privileged Textual Information},
-  author={Karimian, Banafsheh and Avanzato, Giulia and Belharbi, Soufian and McCaffrey, Luke and Shateri, Mohammadhadi and Granger, Eric},
-  booktitle={arxiv},
-  year={2025}
+@misc{karimian2025clipitclipbasedpairinghistology,
+      title={CLIP-IT: CLIP-based Pairing for Histology Images Classification}, 
+      author={Banafsheh Karimian and Giulia Avanzato and Soufian Belharbi and Alexis Guichemerre and Luke McCaffrey and Mohammadhadi Shateri and Eric Granger},
+      year={2025},
+      eprint={2504.16181},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.16181}, 
 }
 ```
 
