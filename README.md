@@ -1,4 +1,4 @@
-# CLIP-IT: CLIP-based Pairing of Histology Images with Privileged Textual Information
+# [WACV 2026] CLIP-IT: CLIP-based Pairing of Histology Images with Privileged Textual Information
 
 > **CLIP-IT** is a novel framework for enhancing histology image classification by **pairing vision data with external, unpaired text reports** using CLIP-based matching. It **trains a unimodal classifier with multimodal benefits** — without requiring text at inference time.
 
